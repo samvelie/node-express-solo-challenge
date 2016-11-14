@@ -6,13 +6,13 @@ var jokes = [
     punchLine: "Anyone can roast beef."
   },
   {
-    whoseJoke: "Millie",
-    jokeQuestion: "What do you call a pile of cats?",
-    punchLine: "A meowntain!"
+    whoseJoke: "Kris",
+    jokeQuestion: "How many software engineers does it take to change a lightbulb?",
+    punchLine: "None! That's a hardware problem!"
   },
   {
-    whoseJoke: "dEv",
-    jokeQuestion: "Why should you not play cards in the forest?",
-    punchLine: "Too many Cheetahs"
+    whoseJoke: "Luke",
+    jokeQuestion: "Friends are like snow flakes...",
+    punchLine: "If you pee on them they disappear."
   }
 ];
