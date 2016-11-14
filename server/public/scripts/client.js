@@ -1,1 +1,1 @@
-// empty
+console.log('js loaded');
