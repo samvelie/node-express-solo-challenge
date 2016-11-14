@@ -1,5 +1,5 @@
 // initial jokes provided by the client
-jokes = [
+var jokes = [
   {
     whoseJoke: "Huck",
     jokeQuestion: "What's the difference between roast beef and pea soup?",
