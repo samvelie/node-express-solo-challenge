@@ -25,3 +25,7 @@ jokes = [
 ```
 
 To get started, fork this repo and clone it to your machine.
+
+### Reminder
+
+Focus on getting the app up and running first. You can come back and clean things up later if you have time.
