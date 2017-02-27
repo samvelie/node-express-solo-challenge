@@ -1,11 +1,11 @@
 ##Node Express jQuery Code Challenge
 
 ### Objectives
-- Set up server side routes to handle requests in a node/express application.
-- Send requests to the server using ajax in the client side script.
-- Display response on the DOM.
-- Gather input from client side and save this data on the server.
-- Demonstrate the separation of logic between the client and the server.
+- [x] Set up server side routes to handle requests in a node/express application.
+- [x] Send requests to the server using ajax in the client side script.
+- [x] Display response on the DOM.
+- [x] Gather input from client side and save this data on the server.
+- [x] Demonstrate the separation of logic between the client and the server.
 
 ### The Joke Book
 

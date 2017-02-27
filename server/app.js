@@ -1,12 +1,12 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var bodyParser = require('body-parser');
+var bodyParser = require('body-parser'); //added this because I know no other way
 var port = 3000;
 
 
 // initial jokes provided by the client
-//
+// this gets updated by the post logic, located here on the server
 var jokes = [
   {
     whoseJoke: "Luke",
@@ -29,6 +29,7 @@ var jokes = [
 app.use(express.static('server/public'));
 app.use( bodyParser.urlencoded({extended: true}));
 
+
 // routes
 
 // this route is used when jQuery loads to show the current joke list
@@ -37,7 +38,7 @@ app.get('/jokes', function(req,res){
   res.send(jokes);
 })
 
-// this route is used when user adds a new joke. It contains the logic that adds that joke information to the jokes array, then returns the updated array
+// this route is used when user adds a new joke. It contains the logic that adds that joke information to the jokes array, then sends the updated array back to the client
 app.post('/jokes', function(req, res){
   console.log('in jokes with', req.body);
   jokes.push(req.body);
