@@ -1,1 +1,17 @@
 /* empty */
+body {
+  font-family: monospace;
+  background-color: LightSteelBlue;
+}
+
+.name{
+  font-style: oblique;
+}
+
+.setUp{
+  color: Crimson;
+}
+
+.punchLine{
+  color: Lime;
+}

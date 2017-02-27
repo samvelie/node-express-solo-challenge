@@ -24,9 +24,9 @@ $(document).ready(function() {
         $('#jokesContainer').empty(); //will clear what is already on page
 
         for (var i = 0; i < response.length; i++) {
-          var whatGetsShown = '<p>Name: ' + response[i].whoseJoke + '</p>' +
-                              '<p>' + response[i].jokeQuestion + '</p>' +
-                              '<p>' + response[i].punchLine + '</p>';
+          var whatGetsShown = '<p class = "name" >Name: ' + response[i].whoseJoke + '</p>' +
+                              '<p class = "setUp" >' + response[i].jokeQuestion + '</p>' +
+                              '<p class = "punchLine" >' + response[i].punchLine + '</p>';
 
           $('#jokesContainer').append(whatGetsShown);
         }
@@ -42,9 +42,9 @@ $(document).ready(function() {
       url: '/jokes',
       success: function(response){
         for (var i = 0; i < response.length; i++) {
-          var whatGetsShown = '<p>Name: ' + response[i].whoseJoke + '</p>' +
-                              '<p>' + response[i].jokeQuestion + '</p>' +
-                              '<p>' + response[i].punchLine + '</p>';
+          var whatGetsShown = '<p class = "name">From: ' + response[i].whoseJoke + '</p>' +
+                              '<p class = "setUp">' + response[i].jokeQuestion + '</p>' +
+                              '<p class = "punchLine">' + response[i].punchLine + '</p>';
 
           $('#jokesContainer').append(whatGetsShown);
         }//end for loop

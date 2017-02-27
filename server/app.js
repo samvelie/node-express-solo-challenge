@@ -30,10 +30,14 @@ app.use(express.static('server/public'));
 app.use( bodyParser.urlencoded({extended: true}));
 
 // routes
+
+// this route is used when jQuery loads to show the current joke list
 app.get('/jokes', function(req,res){
+  console.log('getting jokes now');
   res.send(jokes);
 })
 
+// this route is used when user adds a new joke. It contains the logic that adds that joke information to the jokes array, then returns the updated array
 app.post('/jokes', function(req, res){
   console.log('in jokes with', req.body);
   jokes.push(req.body);
