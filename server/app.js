@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 var port = 3000;
 
 
@@ -25,9 +26,13 @@ var jokes = [
 
 // static file requests
 app.use(express.static('server/public'));
+app.use( bodyParser.urlencoded({extended: true}));
 
 // routes
-
+app.post('/jokes', function(req, res){
+  console.log('in jokes with', req.body);
+  res.send('hahaha');
+})
 
 // Send index.html file
 app.get('/', function(req, res) {
