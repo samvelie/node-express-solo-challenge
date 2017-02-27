@@ -1,5 +1,6 @@
 $(document).ready(function() {
   console.log('jquery loaded');
+  getFromServerToDom();
 
   $('#submit').on('click', function(){
     console.log('submit clicked');
@@ -20,8 +21,34 @@ $(document).ready(function() {
       data: jokeObject,
       success: function(response){
         console.log('back from server with:', response);
-      }
-    });
-  });
+        $('#jokesContainer').empty(); //will clear what is already on page
 
-});
+        for (var i = 0; i < response.length; i++) {
+          var whatGetsShown = '<p>Name: ' + response[i].whoseJoke + '</p>' +
+                              '<p>' + response[i].jokeQuestion + '</p>' +
+                              '<p>' + response[i].punchLine + '</p>';
+
+          $('#jokesContainer').append(whatGetsShown);
+        }
+
+      }//end success function in ajax
+    });//end ajax
+  });//end submit click function
+
+  //function to get jokes from the server and display on DOM
+  function getFromServerToDom(){
+    $.ajax({
+      type: 'GET',
+      url: '/jokes',
+      success: function(response){
+        for (var i = 0; i < response.length; i++) {
+          var whatGetsShown = '<p>Name: ' + response[i].whoseJoke + '</p>' +
+                              '<p>' + response[i].jokeQuestion + '</p>' +
+                              '<p>' + response[i].punchLine + '</p>';
+
+          $('#jokesContainer').append(whatGetsShown);
+        }//end for loop
+      }//end success
+    });//end ajax
+  }//end getFromServerToDom function
+});//end document ready

@@ -6,6 +6,7 @@ var port = 3000;
 
 
 // initial jokes provided by the client
+//
 var jokes = [
   {
     whoseJoke: "Luke",
@@ -29,9 +30,14 @@ app.use(express.static('server/public'));
 app.use( bodyParser.urlencoded({extended: true}));
 
 // routes
+app.get('/jokes', function(req,res){
+  res.send(jokes);
+})
+
 app.post('/jokes', function(req, res){
   console.log('in jokes with', req.body);
-  res.send('hahaha');
+  jokes.push(req.body);
+  res.send(jokes);
 })
 
 // Send index.html file
