@@ -8,7 +8,7 @@
 
 ### The Joke Book
 
-Your client has asked you to create a Joke Book application. The server will contain all the current joke data and you have been provided with the initial server file (```server/app.js```).
+Your client has asked you to create a Joke Book application. The server will contain all the current joke data and you have been provided with the initial server file (`server/app.js`).
 
 Your job will be to build up the server around the data in the `server/app.js` file, display the current jokes to the DOM, and add the ability for users to add their own jokes and display these too.
 
